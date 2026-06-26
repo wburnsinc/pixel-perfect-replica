@@ -9,38 +9,488 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThriftgirlRouteImport } from './routes/thriftgirl'
+import { Route as SignUpRouteImport } from './routes/sign-up'
+import { Route as SignInRouteImport } from './routes/sign-in'
+import { Route as ShareRouteImport } from './routes/share'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as RideshareRouteImport } from './routes/rideshare'
+import { Route as PoolshareRouteImport } from './routes/poolshare'
+import { Route as PlaydateRouteImport } from './routes/playdate'
+import { Route as InvestorRouteImport } from './routes/investor'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as EarntreeRouteImport } from './routes/earntree'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ContractorsRouteImport } from './routes/contractors'
+import { Route as BurncallRouteImport } from './routes/burncall'
+import { Route as BlueTruckRouteImport } from './routes/blue-truck'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LegalPageRouteImport } from './routes/legal.$page'
+import { Route as DashboardTrackerRouteImport } from './routes/dashboard.tracker'
+import { Route as DashboardPaymentsRouteImport } from './routes/dashboard.payments'
+import { Route as DashboardMessagesRouteImport } from './routes/dashboard.messages'
+import { Route as DashboardBookingsRouteImport } from './routes/dashboard.bookings'
+import { Route as ContractorsJoinRouteImport } from './routes/contractors.join'
+import { Route as ContractorPortalRouteImport } from './routes/contractor.portal'
 
+const ThriftgirlRoute = ThriftgirlRouteImport.update({
+  id: '/thriftgirl',
+  path: '/thriftgirl',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignUpRoute = SignUpRouteImport.update({
+  id: '/sign-up',
+  path: '/sign-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignInRoute = SignInRouteImport.update({
+  id: '/sign-in',
+  path: '/sign-in',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShareRoute = ShareRouteImport.update({
+  id: '/share',
+  path: '/share',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RideshareRoute = RideshareRouteImport.update({
+  id: '/rideshare',
+  path: '/rideshare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoolshareRoute = PoolshareRouteImport.update({
+  id: '/poolshare',
+  path: '/poolshare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlaydateRoute = PlaydateRouteImport.update({
+  id: '/playdate',
+  path: '/playdate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestorRoute = InvestorRouteImport.update({
+  id: '/investor',
+  path: '/investor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EarntreeRoute = EarntreeRouteImport.update({
+  id: '/earntree',
+  path: '/earntree',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContractorsRoute = ContractorsRouteImport.update({
+  id: '/contractors',
+  path: '/contractors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BurncallRoute = BurncallRouteImport.update({
+  id: '/burncall',
+  path: '/burncall',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlueTruckRoute = BlueTruckRouteImport.update({
+  id: '/blue-truck',
+  path: '/blue-truck',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LegalPageRoute = LegalPageRouteImport.update({
+  id: '/legal/$page',
+  path: '/legal/$page',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardTrackerRoute = DashboardTrackerRouteImport.update({
+  id: '/tracker',
+  path: '/tracker',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardPaymentsRoute = DashboardPaymentsRouteImport.update({
+  id: '/payments',
+  path: '/payments',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardMessagesRoute = DashboardMessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const DashboardBookingsRoute = DashboardBookingsRouteImport.update({
+  id: '/bookings',
+  path: '/bookings',
+  getParentRoute: () => DashboardRoute,
+} as any)
+const ContractorsJoinRoute = ContractorsJoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => ContractorsRoute,
+} as any)
+const ContractorPortalRoute = ContractorPortalRouteImport.update({
+  id: '/contractor/portal',
+  path: '/contractor/portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blue-truck': typeof BlueTruckRoute
+  '/burncall': typeof BurncallRoute
+  '/contractors': typeof ContractorsRouteWithChildren
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/earntree': typeof EarntreeRoute
+  '/help': typeof HelpRoute
+  '/investor': typeof InvestorRoute
+  '/playdate': typeof PlaydateRoute
+  '/poolshare': typeof PoolshareRoute
+  '/rideshare': typeof RideshareRoute
+  '/services': typeof ServicesRoute
+  '/settings': typeof SettingsRoute
+  '/share': typeof ShareRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
+  '/thriftgirl': typeof ThriftgirlRoute
+  '/contractor/portal': typeof ContractorPortalRoute
+  '/contractors/join': typeof ContractorsJoinRoute
+  '/dashboard/bookings': typeof DashboardBookingsRoute
+  '/dashboard/messages': typeof DashboardMessagesRoute
+  '/dashboard/payments': typeof DashboardPaymentsRoute
+  '/dashboard/tracker': typeof DashboardTrackerRoute
+  '/legal/$page': typeof LegalPageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blue-truck': typeof BlueTruckRoute
+  '/burncall': typeof BurncallRoute
+  '/contractors': typeof ContractorsRouteWithChildren
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/earntree': typeof EarntreeRoute
+  '/help': typeof HelpRoute
+  '/investor': typeof InvestorRoute
+  '/playdate': typeof PlaydateRoute
+  '/poolshare': typeof PoolshareRoute
+  '/rideshare': typeof RideshareRoute
+  '/services': typeof ServicesRoute
+  '/settings': typeof SettingsRoute
+  '/share': typeof ShareRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
+  '/thriftgirl': typeof ThriftgirlRoute
+  '/contractor/portal': typeof ContractorPortalRoute
+  '/contractors/join': typeof ContractorsJoinRoute
+  '/dashboard/bookings': typeof DashboardBookingsRoute
+  '/dashboard/messages': typeof DashboardMessagesRoute
+  '/dashboard/payments': typeof DashboardPaymentsRoute
+  '/dashboard/tracker': typeof DashboardTrackerRoute
+  '/legal/$page': typeof LegalPageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blue-truck': typeof BlueTruckRoute
+  '/burncall': typeof BurncallRoute
+  '/contractors': typeof ContractorsRouteWithChildren
+  '/dashboard': typeof DashboardRouteWithChildren
+  '/earntree': typeof EarntreeRoute
+  '/help': typeof HelpRoute
+  '/investor': typeof InvestorRoute
+  '/playdate': typeof PlaydateRoute
+  '/poolshare': typeof PoolshareRoute
+  '/rideshare': typeof RideshareRoute
+  '/services': typeof ServicesRoute
+  '/settings': typeof SettingsRoute
+  '/share': typeof ShareRoute
+  '/sign-in': typeof SignInRoute
+  '/sign-up': typeof SignUpRoute
+  '/thriftgirl': typeof ThriftgirlRoute
+  '/contractor/portal': typeof ContractorPortalRoute
+  '/contractors/join': typeof ContractorsJoinRoute
+  '/dashboard/bookings': typeof DashboardBookingsRoute
+  '/dashboard/messages': typeof DashboardMessagesRoute
+  '/dashboard/payments': typeof DashboardPaymentsRoute
+  '/dashboard/tracker': typeof DashboardTrackerRoute
+  '/legal/$page': typeof LegalPageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/admin'
+    | '/blue-truck'
+    | '/burncall'
+    | '/contractors'
+    | '/dashboard'
+    | '/earntree'
+    | '/help'
+    | '/investor'
+    | '/playdate'
+    | '/poolshare'
+    | '/rideshare'
+    | '/services'
+    | '/settings'
+    | '/share'
+    | '/sign-in'
+    | '/sign-up'
+    | '/thriftgirl'
+    | '/contractor/portal'
+    | '/contractors/join'
+    | '/dashboard/bookings'
+    | '/dashboard/messages'
+    | '/dashboard/payments'
+    | '/dashboard/tracker'
+    | '/legal/$page'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/admin'
+    | '/blue-truck'
+    | '/burncall'
+    | '/contractors'
+    | '/dashboard'
+    | '/earntree'
+    | '/help'
+    | '/investor'
+    | '/playdate'
+    | '/poolshare'
+    | '/rideshare'
+    | '/services'
+    | '/settings'
+    | '/share'
+    | '/sign-in'
+    | '/sign-up'
+    | '/thriftgirl'
+    | '/contractor/portal'
+    | '/contractors/join'
+    | '/dashboard/bookings'
+    | '/dashboard/messages'
+    | '/dashboard/payments'
+    | '/dashboard/tracker'
+    | '/legal/$page'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/admin'
+    | '/blue-truck'
+    | '/burncall'
+    | '/contractors'
+    | '/dashboard'
+    | '/earntree'
+    | '/help'
+    | '/investor'
+    | '/playdate'
+    | '/poolshare'
+    | '/rideshare'
+    | '/services'
+    | '/settings'
+    | '/share'
+    | '/sign-in'
+    | '/sign-up'
+    | '/thriftgirl'
+    | '/contractor/portal'
+    | '/contractors/join'
+    | '/dashboard/bookings'
+    | '/dashboard/messages'
+    | '/dashboard/payments'
+    | '/dashboard/tracker'
+    | '/legal/$page'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AdminRoute: typeof AdminRoute
+  BlueTruckRoute: typeof BlueTruckRoute
+  BurncallRoute: typeof BurncallRoute
+  ContractorsRoute: typeof ContractorsRouteWithChildren
+  DashboardRoute: typeof DashboardRouteWithChildren
+  EarntreeRoute: typeof EarntreeRoute
+  HelpRoute: typeof HelpRoute
+  InvestorRoute: typeof InvestorRoute
+  PlaydateRoute: typeof PlaydateRoute
+  PoolshareRoute: typeof PoolshareRoute
+  RideshareRoute: typeof RideshareRoute
+  ServicesRoute: typeof ServicesRoute
+  SettingsRoute: typeof SettingsRoute
+  ShareRoute: typeof ShareRoute
+  SignInRoute: typeof SignInRoute
+  SignUpRoute: typeof SignUpRoute
+  ThriftgirlRoute: typeof ThriftgirlRoute
+  ContractorPortalRoute: typeof ContractorPortalRoute
+  LegalPageRoute: typeof LegalPageRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/thriftgirl': {
+      id: '/thriftgirl'
+      path: '/thriftgirl'
+      fullPath: '/thriftgirl'
+      preLoaderRoute: typeof ThriftgirlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sign-up': {
+      id: '/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof SignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sign-in': {
+      id: '/sign-in'
+      path: '/sign-in'
+      fullPath: '/sign-in'
+      preLoaderRoute: typeof SignInRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/share': {
+      id: '/share'
+      path: '/share'
+      fullPath: '/share'
+      preLoaderRoute: typeof ShareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rideshare': {
+      id: '/rideshare'
+      path: '/rideshare'
+      fullPath: '/rideshare'
+      preLoaderRoute: typeof RideshareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/poolshare': {
+      id: '/poolshare'
+      path: '/poolshare'
+      fullPath: '/poolshare'
+      preLoaderRoute: typeof PoolshareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/playdate': {
+      id: '/playdate'
+      path: '/playdate'
+      fullPath: '/playdate'
+      preLoaderRoute: typeof PlaydateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investor': {
+      id: '/investor'
+      path: '/investor'
+      fullPath: '/investor'
+      preLoaderRoute: typeof InvestorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/earntree': {
+      id: '/earntree'
+      path: '/earntree'
+      fullPath: '/earntree'
+      preLoaderRoute: typeof EarntreeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contractors': {
+      id: '/contractors'
+      path: '/contractors'
+      fullPath: '/contractors'
+      preLoaderRoute: typeof ContractorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/burncall': {
+      id: '/burncall'
+      path: '/burncall'
+      fullPath: '/burncall'
+      preLoaderRoute: typeof BurncallRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blue-truck': {
+      id: '/blue-truck'
+      path: '/blue-truck'
+      fullPath: '/blue-truck'
+      preLoaderRoute: typeof BlueTruckRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +498,110 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/legal/$page': {
+      id: '/legal/$page'
+      path: '/legal/$page'
+      fullPath: '/legal/$page'
+      preLoaderRoute: typeof LegalPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/tracker': {
+      id: '/dashboard/tracker'
+      path: '/tracker'
+      fullPath: '/dashboard/tracker'
+      preLoaderRoute: typeof DashboardTrackerRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/payments': {
+      id: '/dashboard/payments'
+      path: '/payments'
+      fullPath: '/dashboard/payments'
+      preLoaderRoute: typeof DashboardPaymentsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/messages': {
+      id: '/dashboard/messages'
+      path: '/messages'
+      fullPath: '/dashboard/messages'
+      preLoaderRoute: typeof DashboardMessagesRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/dashboard/bookings': {
+      id: '/dashboard/bookings'
+      path: '/bookings'
+      fullPath: '/dashboard/bookings'
+      preLoaderRoute: typeof DashboardBookingsRouteImport
+      parentRoute: typeof DashboardRoute
+    }
+    '/contractors/join': {
+      id: '/contractors/join'
+      path: '/join'
+      fullPath: '/contractors/join'
+      preLoaderRoute: typeof ContractorsJoinRouteImport
+      parentRoute: typeof ContractorsRoute
+    }
+    '/contractor/portal': {
+      id: '/contractor/portal'
+      path: '/contractor/portal'
+      fullPath: '/contractor/portal'
+      preLoaderRoute: typeof ContractorPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface ContractorsRouteChildren {
+  ContractorsJoinRoute: typeof ContractorsJoinRoute
+}
+
+const ContractorsRouteChildren: ContractorsRouteChildren = {
+  ContractorsJoinRoute: ContractorsJoinRoute,
+}
+
+const ContractorsRouteWithChildren = ContractorsRoute._addFileChildren(
+  ContractorsRouteChildren,
+)
+
+interface DashboardRouteChildren {
+  DashboardBookingsRoute: typeof DashboardBookingsRoute
+  DashboardMessagesRoute: typeof DashboardMessagesRoute
+  DashboardPaymentsRoute: typeof DashboardPaymentsRoute
+  DashboardTrackerRoute: typeof DashboardTrackerRoute
+}
+
+const DashboardRouteChildren: DashboardRouteChildren = {
+  DashboardBookingsRoute: DashboardBookingsRoute,
+  DashboardMessagesRoute: DashboardMessagesRoute,
+  DashboardPaymentsRoute: DashboardPaymentsRoute,
+  DashboardTrackerRoute: DashboardTrackerRoute,
+}
+
+const DashboardRouteWithChildren = DashboardRoute._addFileChildren(
+  DashboardRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AdminRoute: AdminRoute,
+  BlueTruckRoute: BlueTruckRoute,
+  BurncallRoute: BurncallRoute,
+  ContractorsRoute: ContractorsRouteWithChildren,
+  DashboardRoute: DashboardRouteWithChildren,
+  EarntreeRoute: EarntreeRoute,
+  HelpRoute: HelpRoute,
+  InvestorRoute: InvestorRoute,
+  PlaydateRoute: PlaydateRoute,
+  PoolshareRoute: PoolshareRoute,
+  RideshareRoute: RideshareRoute,
+  ServicesRoute: ServicesRoute,
+  SettingsRoute: SettingsRoute,
+  ShareRoute: ShareRoute,
+  SignInRoute: SignInRoute,
+  SignUpRoute: SignUpRoute,
+  ThriftgirlRoute: ThriftgirlRoute,
+  ContractorPortalRoute: ContractorPortalRoute,
+  LegalPageRoute: LegalPageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
